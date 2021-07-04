@@ -1,4 +1,4 @@
-package com.springboot.cloud.common.test;
+package io.github.opensabre.common.test;
 
 public class PrivateObject {
     private String code;

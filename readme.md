@@ -21,9 +21,9 @@ pom.xml
 
 ```
 <dependency>
-    <groupId>com.springboot.cloud</groupId>
-    <artifactId>test</artifactId>
+    <groupId>io.github.opensabre</groupId>
+    <artifactId>common-test</artifactId>
     <scope>test</scope>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
 </dependency>
 ```

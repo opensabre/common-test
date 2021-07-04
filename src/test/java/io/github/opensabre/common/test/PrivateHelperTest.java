@@ -1,5 +1,4 @@
-package com.springboot.cloud.common.test;
-
+package io.github.opensabre.common.test;
 import org.junit.Assert;
 import org.junit.Test;
 

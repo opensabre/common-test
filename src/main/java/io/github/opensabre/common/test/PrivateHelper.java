@@ -1,4 +1,4 @@
-package com.springboot.cloud.common.test;
+package io.github.opensabre.common.test;
 
 import org.springframework.util.ReflectionUtils;
 
@@ -13,7 +13,7 @@ public class PrivateHelper {
     /**
      * 创建实例
      *
-     * @return
+     * @return PrivateHelper实例
      */
     public static PrivateHelper getInstance() {
         return SingletPrivateHelper.sInstance;
@@ -45,7 +45,7 @@ public class PrivateHelper {
      * @param instance       实例对象
      * @param methodName     方法名
      * @param parameterTypes 方法参数类型
-     * @return
+     * @return 对象方法
      */
     public Method findMethod(Object instance, String methodName, Class<?>... parameterTypes) {
         return ReflectionUtils.findMethod(instance.getClass(), methodName, parameterTypes);
@@ -56,7 +56,7 @@ public class PrivateHelper {
      *
      * @param instance   实例对象
      * @param methodName 方法名
-     * @return
+     * @return 对象方法
      */
     public Method findMethod(Object instance, String methodName) {
         return ReflectionUtils.findMethod(instance.getClass(), methodName);
@@ -67,12 +67,11 @@ public class PrivateHelper {
      *
      * @param instance 实例对象
      * @param method   方法对象
-     * @param args
+     * @param args 实例的参数
+     * @return 对象
      */
     public Object invokePrivateMethod(Object instance, Method method, Object... args) {
         ReflectionUtils.makeAccessible(method);
         return ReflectionUtils.invokeMethod(method, instance, args);
     }
-
-
 }
